@@ -3,8 +3,9 @@ import { Text, StyleSheet, View, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
+import Signup from './Signup';
 
-const GetStarted = () => {
+const GetStarted = ({ navigation }) => {
   const {
     linearGradient,
     textStyle,
@@ -71,7 +72,11 @@ const GetStarted = () => {
         </View>
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
-        <Button buttonStyle={getStartedButtonStyle}>Let's get started</Button>
+        <Button
+          onPress={() => navigation.navigate(Signup)}
+          buttonStyle={getStartedButtonStyle}>
+          Let's get started
+        </Button>
       </CardSection>
     </View>
   );
