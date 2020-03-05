@@ -39,6 +39,7 @@ const Welcomepage = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   textStyle: {
+    marginTop: 100,
     color: '#2A2E43',
     fontFamily: 'Circular Std Bold',
     fontSize: 28,
