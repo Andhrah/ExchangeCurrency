@@ -6,6 +6,7 @@ const Input = ({
   onChangeText,
   placeholder,
   secureTextEntry,
+  keyboardType,
   style,
 }) => {
   const { inputStyle, containerStyle } = styles;
@@ -15,6 +16,7 @@ const Input = ({
       <TextInput
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}
+        keyboardType={keyboardType}
         autoCorrect={false}
         style={[inputStyle, style]}
         value={value}

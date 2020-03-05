@@ -5,6 +5,7 @@ import Welcomepage from './Welcome';
 import GetStarted from './GetStarted';
 import Signup from './Signup';
 import Verification from './Verification';
+import Indentification from './Indentification';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ const Router = () => {
         <Stack.Screen name="GetStarted" component={GetStarted} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Verification" component={Verification} />
+        <Stack.Screen name="Indentification" component={Indentification} />
       </Stack.Navigator>
     </NavigationContainer>
   );
