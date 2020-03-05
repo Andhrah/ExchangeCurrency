@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     color: '#2A2E43',
     fontFamily: 'Circular Std Bold',
-    fontSize: 28,
+    fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
   },

@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
     color: '#FFFFFF',
     fontFamily: 'Circular Std Bold',
-    fontSize: 28,
+    fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
   },
@@ -140,14 +140,15 @@ const styles = StyleSheet.create({
   },
   boxTextStyle: {
     color: '#2A2E43',
-    fontSize: 20,
+    fontSize: 16,
     marginBottom: 5,
+    fontWeight: 'bold',
   },
   secondBoxTextStyle: {
     color: '#647394',
     textAlign: 'left',
     fontFamily: 'Circular Std Book',
-    fontSize: 15,
+    fontSize: 14,
   },
   buttonViewStyle: {
     marginTop: 300,

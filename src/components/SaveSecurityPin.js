@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
-import Indentification from './Indentification';
 import AllDone from './AllDone';
 
 const SaveSecurityPin = ({ navigation }) => {
