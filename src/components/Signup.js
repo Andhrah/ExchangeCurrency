@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
+import Verification from './Verification';
 
 const Signup = ({ navigation }) => {
   const {
@@ -46,7 +47,11 @@ const Signup = ({ navigation }) => {
         <Input style={inputStyle} />
 
         <CardSection>
-          <Button buttonStyle={signupButtonstyle}>Create an Account</Button>
+          <Button
+            onPress={() => navigation.navigate(Verification)}
+            buttonStyle={signupButtonstyle}>
+            Create an Account
+          </Button>
         </CardSection>
       </View>
     </Card>
