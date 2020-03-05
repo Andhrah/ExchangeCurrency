@@ -8,6 +8,7 @@ import Verification from './Verification';
 import Indentification from './Indentification';
 import Selfie from './Selfie';
 import SetSecurityPin from './SetSecurityPin';
+import SaveSecurityPin from './SaveSecurityPin';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const Router = () => {
         <Stack.Screen name="Indentification" component={Indentification} />
         <Stack.Screen name="Selfie" component={Selfie} />
         <Stack.Screen name="SetSecurityPin" component={SetSecurityPin} />
+        <Stack.Screen name="SaveSecurityPin" component={SaveSecurityPin} />
       </Stack.Navigator>
     </NavigationContainer>
   );

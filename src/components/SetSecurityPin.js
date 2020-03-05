@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
-import Selfie from './Selfie';
+import SaveSecurityPin from './SaveSecurityPin';
 
-const Indentification = ({ navigation }) => {
+const SetSecurityPin = ({ navigation }) => {
   const {
     linearGradient,
     backArrowStyle,
@@ -21,7 +21,7 @@ const Indentification = ({ navigation }) => {
     secondBoxTextStyle,
     secondViewStyle,
     buttonViewStyle,
-    getStartedButtonStyle,
+    setPinButtonStyle,
   } = styles;
   return (
     <View>
@@ -37,14 +37,14 @@ const Indentification = ({ navigation }) => {
             source={require('../assets/images/backarrow-white-icon.png')}
           />
         </TouchableOpacity>
-        <Text style={textStyle}>Identification</Text>
+        <Text style={textStyle}>Security</Text>
         <Image
           style={imageStyle}
           source={require('../assets/images/Ellipses.png')}
         />
         <View style={containerViewStyle}>
           <View style={imageViewStyle}>
-            <Text style={imageTextStyle}>Take Selfie</Text>
+            <Text style={imageTextStyle}>Set up pin</Text>
             <Image
               style={selfieImageStyle}
               source={require('../assets/images/user-selfie-icon.png')}
@@ -54,20 +54,10 @@ const Indentification = ({ navigation }) => {
           <View style={viewStyle}>
             <Text style={textButtonStyle}>1</Text>
             <View style={secondViewStyle}>
-              <Text style={boxTextStyle}>Good Lighting</Text>
+              <Text style={boxTextStyle}>Easy to Remember</Text>
               <Text style={secondBoxTextStyle}>
-                Make sure you are in a well lit environment and both ears are
-                uncovered
-              </Text>
-            </View>
-          </View>
-
-          <View style={viewStyle}>
-            <Text style={textButtonStyle}>2</Text>
-            <View style={secondViewStyle}>
-              <Text style={boxTextStyle}>Look Straight</Text>
-              <Text style={secondBoxTextStyle}>
-                Hold your phone at eye level and look straight at the camera
+                Please select a 4-digit pin that is easy to remember as this
+                will be used to authorize your transactions
               </Text>
             </View>
           </View>
@@ -75,9 +65,9 @@ const Indentification = ({ navigation }) => {
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
         <Button
-          onPress={() => navigation.navigate(Selfie)}
-          buttonStyle={getStartedButtonStyle}>
-          Take Selfie
+          onPress={() => navigation.navigate(SaveSecurityPin)}
+          buttonStyle={setPinButtonStyle}>
+          Set Pin
         </Button>
       </CardSection>
     </View>
@@ -101,12 +91,12 @@ const styles = StyleSheet.create({
     marginTop: 30,
     color: '#FFFFFF',
     fontFamily: 'Circular Std Bold',
-    fontSize: 28,
+    fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
   },
   imageStyle: {
-    marginBottom: 20,
+    marginBottom: 50,
   },
   secondTextStyle: {
     fontSize: 15,
@@ -117,7 +107,7 @@ const styles = StyleSheet.create({
   },
   containerViewStyle: {
     backgroundColor: '#FFFFFF',
-    height: 400,
+    height: 316,
     width: 302,
     padding: 20,
     borderRadius: 5,
@@ -146,6 +136,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     height: 100,
     width: 100,
+    marginBottom: 5,
   },
   textButtonStyle: {
     marginRight: 30,
@@ -172,12 +163,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   buttonViewStyle: {
-    marginTop: 320,
+    marginTop: 300,
     alignItems: 'center',
   },
-  getStartedButtonStyle: {
+  setPinButtonStyle: {
     backgroundColor: '#5E62EE',
   },
 });
 
-export default Indentification;
+export default SetSecurityPin;
