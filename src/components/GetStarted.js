@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
   linearGradient: {
     height: 314,
     alignItems: 'center',
-    // paddingTop: 100,
     paddingLeft: 30,
     paddingRight: 30,
     borderBottomLeftRadius: 20,
