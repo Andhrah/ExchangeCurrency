@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image } from 'react-native';
+import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
@@ -8,6 +8,7 @@ import Signup from './Signup';
 const GetStarted = ({ navigation }) => {
   const {
     linearGradient,
+    backArrowStyle,
     textStyle,
     secondTextStyle,
     containerViewStyle,
@@ -26,6 +27,13 @@ const GetStarted = ({ navigation }) => {
         end={{ x: 1, y: 0 }}
         colors={['#5E62EE', '#5E62EE', '#5E9CEE']}
         style={linearGradient}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={backArrowStyle}>
+          <Image
+            source={require('../assets/images/backarrow-white-icon.png')}
+          />
+        </TouchableOpacity>
         <Text style={textStyle}>Let's get started</Text>
         <Text style={secondTextStyle}>
           To create your BDC.NG account, you'll need to do these 3 simple steps
@@ -86,13 +94,18 @@ const styles = StyleSheet.create({
   linearGradient: {
     height: 314,
     alignItems: 'center',
-    paddingTop: 100,
+    // paddingTop: 100,
     paddingLeft: 30,
     paddingRight: 30,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
+  backArrowStyle: {
+    marginTop: 30,
+    alignSelf: 'flex-start',
+  },
   textStyle: {
+    marginTop: 40,
     color: '#FFFFFF',
     fontFamily: 'Circular Std Bold',
     fontSize: 28,
