@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
@@ -32,7 +33,7 @@ const Signup = ({ navigation }) => {
             <Input style={inputStyle} />
           </View>
 
-          <View style={{ flex: 1}}>
+          <View style={{ flex: 1 }}>
             <Text style={inputTextStyle}>Last Name</Text>
             <Input style={inputStyle} />
           </View>
