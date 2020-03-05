@@ -6,6 +6,8 @@ import GetStarted from './GetStarted';
 import Signup from './Signup';
 import Verification from './Verification';
 import Indentification from './Indentification';
+import Selfie from './Selfie';
+import SetSecurityPin from './SetSecurityPin';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +23,8 @@ const Router = () => {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Verification" component={Verification} />
         <Stack.Screen name="Indentification" component={Indentification} />
+        <Stack.Screen name="Selfie" component={Selfie} />
+        <Stack.Screen name="SetSecurityPin" component={SetSecurityPin} />
       </Stack.Navigator>
     </NavigationContainer>
   );

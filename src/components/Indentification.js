@@ -4,6 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
 import Signup from './Signup';
+import Selfie from './Selfie';
 
 const Indentification = ({ navigation }) => {
   const {
@@ -75,7 +76,7 @@ const Indentification = ({ navigation }) => {
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
         <Button
-          onPress={() => navigation.navigate(Signup)}
+          onPress={() => navigation.navigate(Selfie)}
           buttonStyle={getStartedButtonStyle}>
           Take Selfie
         </Button>
