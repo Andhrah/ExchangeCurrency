@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
-import Indentification from './Indentification';
+import { Actions } from 'react-native-router-flux';
 
-const Verification = ({ navigation }) => {
+const Verification = () => {
   const {
     backArrowStyle,
     textStyle,
@@ -17,9 +17,7 @@ const Verification = ({ navigation }) => {
   } = styles;
   return (
     <Card>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={backArrowStyle}>
+      <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
         <Image source={require('../assets/images/backarrow-black-icon.png')} />
       </TouchableOpacity>
       <Text style={textStyle}>Verification</Text>
@@ -40,7 +38,7 @@ const Verification = ({ navigation }) => {
 
         <CardSection>
           <Button
-            onPress={() => navigation.navigate(Indentification)}
+            onPress={() => Actions.identification()}
             buttonStyle={signupButtonstyle}>
             Continue
           </Button>

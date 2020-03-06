@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import { Card, Button, CardSection } from './common';
-import SetSecurityPin from './SetSecurityPin';
-import Indentification from './Indentification';
+import { Actions } from 'react-native-router-flux';
 
-const Selfie = ({ navigation }) => {
+const Selfie = () => {
   const {
     backArrowStyle,
     textStyle,
@@ -16,9 +15,7 @@ const Selfie = ({ navigation }) => {
   } = styles;
   return (
     <Card>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={backArrowStyle}>
+      <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
         <Image source={require('../assets/images/backarrow-black-icon.png')} />
       </TouchableOpacity>
       <Text style={textStyle}>Selfie Done</Text>
@@ -35,13 +32,13 @@ const Selfie = ({ navigation }) => {
 
       <CardSection>
         <Button
-          onPress={() => navigation.navigate(SetSecurityPin)}
+          onPress={() => Actions.setSecurityPin()}
           buttonStyle={proceedButtonstyle}>
           Proceed
         </Button>
 
         <Button
-          onPress={() => navigation.navigate(Indentification)}
+          onPress={() => Actions.identification()}
           buttonStyle={retakePhotoButtonstyle}>
           Retake Photo
         </Button>

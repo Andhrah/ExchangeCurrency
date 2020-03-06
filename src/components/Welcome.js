@@ -1,12 +1,12 @@
 // import libraries for making a component
 import React from 'react';
 import { Text, Image, StyleSheet } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Card, Button } from './common';
-import GetStarted from './GetStarted';
 import { CardSection } from './common/CardSection';
 
 // Make a component
-const Welcomepage = ({ navigation }) => {
+const Welcomepage = () => {
   const {
     textStyle,
     secondTextStyle,
@@ -28,7 +28,7 @@ const Welcomepage = ({ navigation }) => {
         />
         <Button
           buttonStyle={signupButtonStyle}
-          onPress={() => navigation.navigate(GetStarted)}>
+          onPress={() => Actions.getStarted()}>
           Create an Account
         </Button>
         <Button buttonStyle={loginButtonStyles}>Log In</Button>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
-import AllDone from './AllDone';
+import { Actions } from 'react-native-router-flux';
 
-const SaveSecurityPin = ({ navigation }) => {
+const SaveSecurityPin = () => {
   const {
     backArrowStyle,
     textStyle,
@@ -16,9 +16,7 @@ const SaveSecurityPin = ({ navigation }) => {
   } = styles;
   return (
     <Card>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={backArrowStyle}>
+      <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
         <Image source={require('../assets/images/backarrow-black-icon.png')} />
       </TouchableOpacity>
       <Text style={textStyle}>Set your PIN</Text>
@@ -35,7 +33,7 @@ const SaveSecurityPin = ({ navigation }) => {
 
         <CardSection>
           <Button
-            onPress={() => navigation.navigate(AllDone)}
+            onPress={() => Actions.allDone()}
             buttonStyle={savePinButtonstyle}>
             Save PIN
           </Button>

@@ -2,9 +2,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { Card, Input, Button, CardSection } from './common';
-import Verification from './Verification';
+import { Actions } from 'react-native-router-flux';
 
-const Signup = ({ navigation }) => {
+const Signup = () => {
   const {
     backArrowStyle,
     textStyle,
@@ -18,9 +18,7 @@ const Signup = ({ navigation }) => {
   } = styles;
   return (
     <Card>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={backArrowStyle}>
+      <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
         <Image source={require('../assets/images/backarrow-black-icon.png')} />
       </TouchableOpacity>
       <Text style={textStyle}>Set up profile</Text>
@@ -48,7 +46,7 @@ const Signup = ({ navigation }) => {
 
         <CardSection>
           <Button
-            onPress={() => navigation.navigate(Verification)}
+            onPress={() => Actions.verification()}
             buttonStyle={signupButtonstyle}>
             Create an Account
           </Button>

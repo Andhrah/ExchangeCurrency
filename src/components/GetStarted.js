@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
-import Signup from './Signup';
+import { Actions } from 'react-native-router-flux';
 
-const GetStarted = ({ navigation }) => {
+const GetStarted = () => {
   const {
     linearGradient,
     backArrowStyle,
@@ -27,9 +27,7 @@ const GetStarted = ({ navigation }) => {
         end={{ x: 1, y: 0 }}
         colors={['#5E62EE', '#5E62EE', '#5E9CEE']}
         style={linearGradient}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={backArrowStyle}>
+        <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
           <Image
             source={require('../assets/images/backarrow-white-icon.png')}
           />
@@ -81,7 +79,7 @@ const GetStarted = ({ navigation }) => {
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
         <Button
-          onPress={() => navigation.navigate(Signup)}
+          onPress={() => Actions.signup()}
           buttonStyle={getStartedButtonStyle}>
           Let's get started
         </Button>

@@ -1,15 +1,9 @@
-import 'react-native-gesture-handler';
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import Welcomepage from './src/components/Welcome';
 import Router from './src/components/Router';
 
 const App = () => {
-  return (
-    // eslint-disable-next-line react-native/no-inline-styles
-    <Router style={{ flex: 1 }}>
-      <Welcomepage />
-    </Router>
-  );
+  return <Router style={{ flex: 1 }} />;
 };
 
 export default App;

@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
-import Selfie from './Selfie';
+import { Actions } from 'react-native-router-flux';
 
-const Indentification = ({ navigation }) => {
+const Identification = () => {
   const {
     linearGradient,
     backArrowStyle,
@@ -30,9 +30,7 @@ const Indentification = ({ navigation }) => {
         end={{ x: 1, y: 0 }}
         colors={['#5E62EE', '#5E62EE', '#5E9CEE']}
         style={linearGradient}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={backArrowStyle}>
+        <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
           <Image
             source={require('../assets/images/backarrow-white-icon.png')}
           />
@@ -75,7 +73,7 @@ const Indentification = ({ navigation }) => {
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
         <Button
-          onPress={() => navigation.navigate(Selfie)}
+          onPress={() => Actions.selfie()}
           buttonStyle={getStartedButtonStyle}>
           Take Selfie
         </Button>
@@ -180,4 +178,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Indentification;
+export default Identification;

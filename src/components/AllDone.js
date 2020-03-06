@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Card, Button, CardSection } from './common';
+import { Actions } from 'react-native-router-flux';
 
 const AllDone = () => {
   const { viewStyle, textStyle, secondTextStyle, allDoneButtonstyle } = styles;
@@ -14,7 +15,11 @@ const AllDone = () => {
         </Text>
 
         <CardSection>
-          <Button buttonStyle={allDoneButtonstyle}>Proceed</Button>
+          <Button
+            onPress={() => Actions.welcome()}
+            buttonStyle={allDoneButtonstyle}>
+            Proceed
+          </Button>
         </CardSection>
       </View>
     </Card>

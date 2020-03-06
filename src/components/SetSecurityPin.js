@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common';
 import { CardSection } from './common/CardSection';
-import SaveSecurityPin from './SaveSecurityPin';
+import { Actions } from 'react-native-router-flux';
 
-const SetSecurityPin = ({ navigation }) => {
+const SetSecurityPin = () => {
   const {
     linearGradient,
     backArrowStyle,
@@ -30,9 +30,7 @@ const SetSecurityPin = ({ navigation }) => {
         end={{ x: 1, y: 0 }}
         colors={['#5E62EE', '#5E62EE', '#5E9CEE']}
         style={linearGradient}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={backArrowStyle}>
+        <TouchableOpacity onPress={() => Actions.pop()} style={backArrowStyle}>
           <Image
             source={require('../assets/images/backarrow-white-icon.png')}
           />
@@ -65,7 +63,7 @@ const SetSecurityPin = ({ navigation }) => {
       </LinearGradient>
       <CardSection style={buttonViewStyle}>
         <Button
-          onPress={() => navigation.navigate(SaveSecurityPin)}
+          onPress={() => Actions.saveSecurityPin()}
           buttonStyle={setPinButtonStyle}>
           Set Pin
         </Button>
